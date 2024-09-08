@@ -1,3 +1,24 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Copyright © 2024 Joey Tatú & TattedFaceJoey.ie
+All rights reserved.
+
+This script formats MediaWiki code by applying the following transformations:
+1. Deletes the output file if it exists and waits for 1 second to ensure it is deleted.
+2. Replaces pipes `|` within double curly braces with a placeholder.
+3. Inserts new lines before double pipes.
+4. Restores the original pipes within double curly braces.
+5. Replaces all instances of double pipes with a single pipe.
+6. Ensures that `|-` is always preceded by two new lines.
+7. Removes any blank lines.
+8. Writes the formatted wiki code to the output file output_wiki_code.txt.
+
+Usage:
+    python format_wiki_code.py
+"""
+
 import re
 import os
 import time
